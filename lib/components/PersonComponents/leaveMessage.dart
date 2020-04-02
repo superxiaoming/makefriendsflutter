@@ -41,9 +41,13 @@ class _LeaveMessage extends State<LeaveMessage>{
           SliverToBoxAdapter(
               child: Padding(
                 padding: EdgeInsets.fromLTRB(15, 20, 15, 0),
-                child: Column(
+                child: _data == null || _data.length == 0 ? Container(
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.symmetric(vertical: 20),
+                    child: Text('暂无信息')
+                ):Column(
                     children: buildWidget(_data)
-                ),
+                )
               )
           )
         ],

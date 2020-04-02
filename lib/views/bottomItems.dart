@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:makeriends/views/friendList.dart';
 import 'more.dart';
 import 'index.dart';
 import 'studyGoal.dart';
@@ -22,8 +23,8 @@ class _MyHomePageState extends State<MyHomePageAnother>{
   List<Widget> _widgetOPtions = <Widget>[
     Index(),
     StudyGoal(),
+    FriendList(),
     More()
-//    Login()
   ];
 
   void _onItemTapped(int index) {
@@ -43,11 +44,13 @@ class _MyHomePageState extends State<MyHomePageAnother>{
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('首页')),
           BottomNavigationBarItem(icon: Icon(Icons.message), title: Text('学习')),
+          BottomNavigationBarItem(icon: Icon(Icons.supervised_user_circle), title: Text('好友')),
           BottomNavigationBarItem(icon: Icon(Icons.person), title: Text('更多'))
         ],
         currentIndex: _selectIndex,
         selectedItemColor: Colors.amber[600],
         onTap: _onItemTapped,
+        type: BottomNavigationBarType.fixed,
       ),
     );
   }

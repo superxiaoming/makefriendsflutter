@@ -2,6 +2,8 @@ class Api {
 
   static const String BASE_URL = "http://192.168.1.11:9024/makefriends";
 
+  static const String WEBSOCKET_URL = "ws://192.168.1.11:9024/makefriends";
+
   static const String LOGIN = "/user/login";
 
   static const String REGISTER = "/user/register";
@@ -39,4 +41,16 @@ class Api {
   static const String EDITUSERINFO = "/user/editUser";
 
   static const String GETTOKEN = "/user/getToken";
+
+  static const String FOCUSON = "/follower/addFollower";
+
+  static const String GETCONNECTION = "/follower/getConnection";
+
+  static const String DELETECONNECTION = "/follower/deleteConnection";
+
+  static const String GETBEWATCHEDUSERINFO = "/follower/getBewatchedUserInfo";
+
+  static const String ADDLEAVEMESSAGE = "/leaveMessage/addLeaveMessage";
+
+  static const String GETUSERSBYNICKNAME = "/user/getUserByUsername";
 }

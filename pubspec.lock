@@ -49,14 +49,14 @@ packages:
       name: build
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.2.2"
+    version: "1.1.6"
   build_config:
     dependency: transitive
     description:
       name: build_config
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.4.2"
+    version: "0.4.1+1"
   build_daemon:
     dependency: transitive
     description:
@@ -77,14 +77,14 @@ packages:
       name: build_runner
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.8.0"
+    version: "1.6.9"
   build_runner_core:
     dependency: transitive
     description:
       name: build_runner_core
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "4.5.3"
+    version: "3.1.1"
   built_collection:
     dependency: transitive
     description:
@@ -296,6 +296,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.3.0"
+  json_model:
+    dependency: "direct dev"
+    description:
+      name: json_model
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.0.2"
   json_serializable:
     dependency: "direct dev"
     description:
@@ -450,6 +457,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.0.5"
+  scoped_model:
+    dependency: "direct main"
+    description:
+      name: scoped_model
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.3.0"
   shared_preferences:
     dependency: "direct main"
     description:
@@ -531,7 +545,7 @@ packages:
       name: stream_transform
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.2.0"
+    version: "0.0.20"
   string_scanner:
     dependency: transitive
     description:
@@ -582,7 +596,7 @@ packages:
     source: hosted
     version: "0.9.7+14"
   web_socket_channel:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: web_socket_channel
       url: "https://pub.flutter-io.cn"

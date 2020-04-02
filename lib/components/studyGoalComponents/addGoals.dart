@@ -82,7 +82,7 @@ class _AddGoals extends State<AddGoals> {
                   children: <Widget>[
                     Text("每天:"),
                     Radio(
-                      value: 1,
+                      value: 0,
                       groupValue: this.repeatType,
                       onChanged: (value) {
                         setState(() {
@@ -92,7 +92,7 @@ class _AddGoals extends State<AddGoals> {
                     ),
                     Text("每周:"),
                     Radio(
-                      value: 2,
+                      value: 1,
                       groupValue: this.repeatType,
                       onChanged: (value) {
                         setState(() {
@@ -102,7 +102,7 @@ class _AddGoals extends State<AddGoals> {
                     ),
                     Text("每月:"),
                     Radio(
-                      value: 3,
+                      value: 2,
                       groupValue: this.repeatType,
                       onChanged: (value) {
                         setState(() {

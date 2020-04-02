@@ -32,10 +32,13 @@ dependencies:
   grouped_checkbox: 1.0.0
   json_annotation: ^2.0.0
   bot_toast: ^2.3.1
+  scoped_model: ^0.3.0
+  web_socket_channel: ^1.0.12
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  json_model: ^0.0.2
   build_runner: ^1.0.0
   json_serializable: ^2.0.0
 

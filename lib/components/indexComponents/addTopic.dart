@@ -85,7 +85,7 @@ class _AddTopic extends State<AddTopic> {
                   child: Text('可以选择图片或者拍照哦'),
                   decoration: BoxDecoration(
                     // 下滑线浅灰色，宽度1像素
-                      border: Border(bottom: BorderSide(color: Colors.grey[200], width: 1.0))
+                    border: Border(bottom: BorderSide(color: Colors.grey[200], width: 1.0))
                   ),
                 ): Image.file(_image, width: 240, height: 200)
               ),

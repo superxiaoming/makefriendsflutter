@@ -290,7 +290,7 @@ class CommitComment extends StatelessWidget{
 class LineWidget extends StatelessWidget{
 
   @override
-  Widget build(BuildContext context) {
+  Widget build (BuildContext context) {
     // TODO: implement build
     return Container(
         decoration: BoxDecoration(

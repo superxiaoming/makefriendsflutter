@@ -37,13 +37,18 @@ class _Comments extends State<Comments> {
           Flex(
             direction: Axis.horizontal,
             children: <Widget>[
-              Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadiusDirectional.circular(100)),
-                  clipBehavior: Clip.antiAlias,
-                  child: _map['headpic'] == null || _map['headpic'] == '' ?
-                      Image.asset('images/nan.jpg', width: 50, height: 50) :
-                  Image.network(_map['headpic'], width: 50, height: 50)
+              GestureDetector(
+                onTap: (){
+                  Navigator.of(context).pushNamed("views/showUserInfo", arguments: _map['creatorId']);
+                },
+                child: Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadiusDirectional.circular(100)),
+                    clipBehavior: Clip.antiAlias,
+                    child: _map['headpic'] == null || _map['headpic'] == '' ?
+                    Image.asset('images/nan.jpg', width: 50, height: 50) :
+                    Image.network(_map['headpic'], width: 50, height: 50)
+                ),
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10),

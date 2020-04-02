@@ -363,6 +363,7 @@ class _PersonInfoState extends State<PersonInfoEdit>{
                             children: <Widget>[
                               Container(
                                 width: 200,
+                                alignment: Alignment.centerRight,
                                 child: Text(data.sign, style: TextStyle(fontSize: 20), overflow: TextOverflow.ellipsis),
                               ),
                               Icon(Icons.chevron_right,size: 30,color: Colors.grey)

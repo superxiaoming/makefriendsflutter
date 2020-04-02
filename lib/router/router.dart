@@ -6,6 +6,9 @@ import 'package:makeriends/components/PersonComponents/myCoupleActivity.dart';
 import 'package:makeriends/components/PersonComponents/myLoveDoubts.dart';
 import 'package:makeriends/components/PersonComponents/myLoveShare.dart';
 import 'package:makeriends/components/PersonComponents/myStudyGoal.dart';
+import 'package:makeriends/components/friendList/addFriends.dart';
+import 'package:makeriends/components/friendList/addMessage.dart';
+import 'package:makeriends/components/friendList/chat.dart';
 import 'package:makeriends/components/indexComponents/addComments.dart';
 import 'package:makeriends/components/indexComponents/addTopic.dart';
 import 'package:makeriends/components/moreComponents/edit.dart';
@@ -17,6 +20,7 @@ import 'package:makeriends/views/login.dart';
 import 'package:makeriends/views/personInfo.dart';
 import 'package:makeriends/views/personInfoEdit.dart';
 import 'package:makeriends/views/register.dart';
+import 'package:makeriends/views/showPersonInfo.dart';
 import '../views/bottomItems.dart';
 
 class Router {
@@ -78,5 +82,14 @@ class Router {
     'views/editInfo': (context) {
       return new EditInfo();
     },
+    'views/showUserInfo': (context) {
+      return new ShowPersonInfo();
+    },
+    'views/addMessage': (context) {
+      return new AddMessage();
+    },
+    'views/addFriends': (context) {
+      return new AddFriends();
+    }
   };
 }
