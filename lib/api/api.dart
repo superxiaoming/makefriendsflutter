@@ -18,6 +18,8 @@ class Api {
 
   static const String GETCOMMENTS = "/comment/getCommentsByTopicId";
 
+  static const String DELETETOPIC = "/topic/deleteTopic";
+
   static const String ADDCOMMENTS = "/comment/addComment";
 
   static const String ADDTOPIC = "/topic/addTopic";

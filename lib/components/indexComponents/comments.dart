@@ -1,12 +1,16 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
+import 'package:makeriends/utils/share.dart';
 import '../../utils/net.dart';
 import '../../api/api.dart';
 
 class Comments extends StatefulWidget{
 
-  Comments({ Key key, this.map: null}): super(key: key);
+  Comments({ Key key, this.map: null, this.getData}): super(key: key);
 
   final Map map;
+
+  final getData;
 
   @override
   _Comments createState() => _Comments();
@@ -16,6 +20,7 @@ class _Comments extends State<Comments> {
 
   Map _map = new Map();
   List comments = [];
+  int count = 0;
 
   @override
   void initState() {
@@ -79,7 +84,8 @@ class _Comments extends State<Comments> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
                     IconButton(
-                        icon: Icon(Icons.list, size: 35)
+                      icon: Icon(Icons.list, size: 35),
+                      onPressed: deleteTopic,
                     )
                   ],
                 ),
@@ -134,11 +140,24 @@ class _Comments extends State<Comments> {
   }
 
   getComments() async {
-    var response = await netUtils.get(Api.BASE_URL + Api.GETCOMMENTS, {'topicId': _map['id']});
+    var response = await netUtils.get(Api.BASE_URL + Api.GETCOMMENTS, {'topicId': widget.map['id']});
     if(mounted){
       setState(() {
         comments = response['data'];
       });
+    }
+  }
+
+  deleteTopic() async {
+    int userId = await Share.getIntValue('userId');
+    var response = await netUtils.get(Api.BASE_URL + Api.DELETETOPIC, {'topicId': widget.map['id'], 'userId': userId});
+    if(response['code'] == 10000){
+      BotToast.showText(text:"删除成功");
+      widget.getData();
+    } else if(response['code'] == 10008){
+      BotToast.showText(text:"没有权限删除别人的动态");
+    } else {
+      BotToast.showText(text:"系统错误");
     }
   }
 }

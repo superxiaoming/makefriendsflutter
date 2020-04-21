@@ -59,7 +59,7 @@ class _MyLoveShare extends State<MyLoveShare> {
 
   List<Widget> buildWidget(List data){
     return data.map((e) {
-      return new Comments(map: e);
+      return new Comments(map: e, getData: () => getData());
     }).toList();
   }
 

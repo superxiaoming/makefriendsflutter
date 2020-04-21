@@ -58,7 +58,7 @@ class _MyCoupleActivity extends State<MyCoupleActivity> {
 
   List<Widget> buildWidget(List data){
     return data.map((e) {
-      return new Comments(map: e);
+      return new Comments(map: e, getData: () => getData());
     }).toList();
   }
 

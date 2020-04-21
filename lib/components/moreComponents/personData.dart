@@ -91,7 +91,7 @@ class _PersonData extends State<PersonData> {
     var response = await netUtils.get(Api.BASE_URL + Api.GETBASICINFO, {
       'userId': userId
     });
-    if(response['resCode'] == 10000){
+    if(response['code'] == 10000){
       setState(() {
         basicInfo = response['data'];
       });
